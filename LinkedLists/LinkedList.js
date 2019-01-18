@@ -19,6 +19,8 @@ class LinkedList {
       this.tail.next = node;
       this.tail = this.tail.next;
     }
+
+    return node;
   }
 
   removeHead() {
