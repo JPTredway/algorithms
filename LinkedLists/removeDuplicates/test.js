@@ -1,5 +1,6 @@
 const expect = require("chai").expect;
-const { removeDuplicates, LinkedList } = require("./index");
+const LinkedList = require("../LinkedList");
+const removeDuplicates = require("./index");
 
 describe("Remove duplicates from a singly-linked list", function() {
   it("should remove duplicates", function() {
