@@ -1,4 +1,4 @@
-const expect = require("chai").expect;
+const { expect } = require("chai");
 const { powerSet } = require("./index");
 
 describe(`Find all subsets of a given given set`, function() {
