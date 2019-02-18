@@ -7,10 +7,11 @@ describe("Remove duplicates from a singly-linked list", function() {
     it("should remove duplicates", function() {
       const List1 = new LinkedList(1);
       List1.addToTail(2);
-      List1.addToTail(0);
+      const parent = List1.addToTail(0);
       List1.addToTail(1);
       List1.addToTail(5);
       removeDuplicates(List1.head);
+      expect(parent.next.val).to.equal(5);
 
       const List2 = new LinkedList(1);
       List2.addToTail(2);
@@ -41,10 +42,11 @@ describe("Remove duplicates from a singly-linked list", function() {
     it("should remove duplicates", function() {
       const List1 = new LinkedList(1);
       List1.addToTail(2);
-      List1.addToTail(0);
+      const parent = List1.addToTail(0);
       List1.addToTail(1);
       List1.addToTail(5);
       removeDuplicatesRecursive(List1.head);
+      expect(parent.next.val).to.equal(5);
 
       const List2 = new LinkedList(1);
       List2.addToTail(2);
