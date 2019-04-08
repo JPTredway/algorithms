@@ -4,8 +4,8 @@ function ListNode(val) {
 }
 
 class LinkedList {
-  constructor(val) {
-    this.head = new ListNode(val);
+  constructor(val = null) {
+    this.head = val !== null ? new ListNode(val) : null;
     this.tail = this.head;
   }
 
@@ -32,6 +32,19 @@ class LinkedList {
       this.head = null;
       this.tail = null;
     }
+  }
+
+  contains(val) {
+    let curr = this.head;
+
+    while (curr) {
+      if (curr.val === val) {
+        return true;
+      }
+      curr = curr.next;
+    }
+
+    return false;
   }
 }
 
